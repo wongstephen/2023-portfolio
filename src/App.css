@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Rufina:wght@400;700&display=swap");
+
+:root {
+  font-weight: 400;
+
+  color: rgba(255, 255, 255, 0.87);
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --monst-font: "Montserrat", "sans-serif";
+  --ruf-font: "Rufina", serif;
+  --color-accent: #679bf7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* outline: 1px solid red; */
+}
+
+body {
+  min-width: 100%;
+  min-height: 100vh;
+}
+
+/* sections */
+section {
+  min-width: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: 1rem;
+}
+
+#home {
+  display: grid;
+}
+
+#home {
+  background-color: black;
+}
+
+#portfolio {
+  background-color: var(--color-accent);
+}
+#contact {
+  background-color: white;
+}
+
+/* top bar */
+div.upper-bar {
+  min-width: 100%;
+  display: flex;
+  position: absolute;
+  padding: 1rem;
+  justify-content: space-between;
+}
+
+h1.upper-bar {
+  font-family: var(--monst-font);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: var(--color-accent);
+}
+
+ul.navi {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+ul.navi > * {
+  color: white;
+  font-family: var(--monst-font);
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+/* hello section */
+div.hello {
+  min-height: 100%;
+  height: 100%;
+  display: grid;
+  place-content: center;
+}
+
+h1.hello {
+  font-size: clamp(4rem, 20vw, 6rem);
+  color: white;
+  font-family: var(--ruf-font);
+  line-height: 0.85;
+}
+
+h1.hello > span {
+  font-size: 2rem;
+}
+
+p.hello {
+  font-family: var(--monst-font);
+  margin-top: 4rem;
+  max-width: 40rem;
+  /* width: 100%; */
+}
+
+p.hello > span {
+  font-weight: 700;
+}
+
+button.hello {
+  max-width: 10rem;
+  padding: 1rem;
+  background-color: transparent;
+  border: 2px solid var(--color-accent);
+  color: var(--color-accent);
+  border-radius: 0.25rem;
+  margin-top: 4rem;
+}
+
+/* section2 about */
+div.about {
+  display: grid;
+  max-width: 1024px;
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.about {
+  color: black;
+}
+
+h2.about {
+  font-size: clamp(3rem, 18vw, 4rem);
+  font-family: var(--ruf-font);
+  margin-top: 2rem;
+}
+p.about {
+  max-width: 45ch;
+  font-size: 1rem;
+  font-family: var(--monst-font);
+  line-height: 1.25;
+}
+p.about:nth-child(3) {
+  margin-top: 2rem;
+  line-height: 1.25;
+}
+div.about-list {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-around;
+}
+ul.about-list {
+  list-style-type: disc;
+  line-height: 1.25;
+  font-family: var(--monst-font);
+  margin-top: 1rem;
+  font-weight: 600;
+  color: var(--color-accent);
+}
+div.about-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 100%; */
+}
+img.about-img {
+  /* max-width: 15rem; */
+  width: 100%;
+  max-width: 30rem;
+}
+
+div.about > div:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+div.about > div {
+  margin-inline: auto;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+div.portfolio {
+  width: 100%;
+  max-width: 1000px;
+  margin-inline: auto;
+}
+div.portfolio > h2 {
+  font-size: 4rem;
+  color: black;
+}
+
+.portfolio-grid {
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.5rem;
+}
+
+img.portfolio-grid {
+  max-width: 100%;
+  max-height: 100%;
+  aspect-ratio: 1 / 1;
+}
+img.portfolio-grid:hover {
+  filter: blur(1px) brightness(50%);
+  overflow: hidden;
+}
+
+@media (min-width: 498px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+@media (min-width: 550px) {
+  section {
+    display: grid;
+    align-items: center;
+  }
+  .portfolio-grid {
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+  }
+}
+@media screen and (min-width: 675px) {
+  img.about-img {
+    /* min-width: 10rem; */
+    margin: 0;
+    padding: 0;
+  }
+  p.about,
+  ul.about-list {
+    line-height: 1.75;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  img.about-img {
+    max-width: 20rem;
+  }
+}
