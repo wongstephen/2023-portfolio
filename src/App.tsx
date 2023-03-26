@@ -1,0 +1,221 @@
+import { useState } from "react";
+import "./App.css";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+
+function App() {
+  return (
+    <div className="App">
+      <Header />
+      <main>
+        <Landing />
+        <About />
+        <Portfolio />
+      </main>
+      <Contact />
+    </div>
+  );
+}
+
+function Header() {
+  const [lastScrollY, setLastScrollY] = useState<number>(0);
+  const [show, setShow] = useState<boolean>(true);
+
+  function handleScroll(): void {
+    if (window.scrollY > lastScrollY) {
+      // scrolling down
+      setShow(() => false);
+    } else {
+      setShow(() => true);
+    }
+    setLastScrollY(() => window.scrollY);
+  }
+
+  window.addEventListener("scroll", handleScroll);
+
+  return (
+    <header className={`header ${!show && "header-hide"}`}>
+      <div className="header__container section__container">
+        <h1 className="header__title">wongstephenk.com</h1>
+        {/* <nav>
+          <ul className="navi">
+            <li>home</li>
+          </ul>
+        </nav> */}
+      </div>
+    </header>
+  );
+}
+
+function Landing() {
+  return (
+    <div className="landing section">
+      <div className="landing__container section__container">
+        <div>
+          <h2 className="landing__text-title">Full-stack Software Developer</h2>
+          <p className="landing__text-subtitle">
+            Meet Stephen, a Seattle-based full-stack software developer with a
+            love for creating innovative solutions that inspire.
+          </p>
+          <div className="landing__contact-container">
+            <button className="landing__contact">👋 Say Hi!</button>
+          </div>
+        </div>
+        <div className="landing__image">
+          <img src="https://placehold.co/300x300" alt="placeholder" />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function About() {
+  return (
+    <div className="about section">
+      <div className="about__container section__container">
+        <div className="about__content">
+          <h2 className="about__title">About me</h2>
+          <p className="about__subtitle">
+            {/* Transforming Complex Business Needs into Seamless Frontend Solutions. */}
+            Versatile Software Developer with a Business-Driven Approach.
+          </p>
+          <p className="about__text">
+            As a software developer, I specialize in developing apps that are
+            easy to use and effective at solving problems. I believe that
+            collaboration is key to success and am always willing to go the
+            extra mile to ensure the success of a project. In addition to my
+            technical skills, I have strong communication and problem-solving
+            abilities and am committed to working with clients to find the best
+            solutions to their challenges.
+          </p>
+          <p className="about__icons-title">
+            Here are a few technologies I’ve been working with recently:
+          </p>
+          <ul className="about__icons-list">
+            <li>
+              <img
+                className="about__icons"
+                src="https://user-images.githubusercontent.com/25181517/117447155-6a868a00-af3d-11eb-9cfe-245df15c9f3f.png"
+                alt="JavaScript"
+              />
+            </li>
+            <li>
+              <img
+                className="about__icons"
+                src="https://user-images.githubusercontent.com/25181517/183890598-19a0ac2d-e88a-4005-a8df-1ee36782fde1.png"
+                alt="TypeScript"
+              />
+            </li>
+            <li>
+              <img
+                className="about__icons"
+                src="https://user-images.githubusercontent.com/25181517/183897015-94a058a6-b86e-4e42-a37f-bf92061753e5.png"
+                alt="React"
+              />
+            </li>
+            <li>
+              <img
+                className="about__icons"
+                src="https://user-images.githubusercontent.com/25181517/183568594-85e280a7-0d7e-4d1a-9028-c8c2209e073c.png"
+                alt="Node.js"
+              />
+            </li>
+            <li>
+              <img
+                className="about__icons"
+                src="https://user-images.githubusercontent.com/25181517/192107856-aa92c8b1-b615-47c3-9141-ed0d29a90239.png"
+                alt="GraphQL"
+              />
+            </li>
+            <li>
+              <img
+                className="about__icons"
+                src="https://user-images.githubusercontent.com/25181517/117201156-9a724800-adec-11eb-9a9d-3cd0f67da4bc.png"
+                alt="Java"
+              />
+            </li>
+            <li>
+              <img
+                className="about__icons"
+                src="https://user-images.githubusercontent.com/25181517/182884177-d48a8579-2cd0-447a-b9a6-ffc7cb02560e.png"
+                alt="mongoDB"
+              />
+            </li>
+            <li>
+              <img
+                className="about__icons"
+                src="https://user-images.githubusercontent.com/25181517/117208740-bfb78400-adf5-11eb-97bb-09072b6bedfc.png"
+                alt="PostgreSQL"
+              />
+            </li>
+          </ul>
+        </div>
+        <div className="about__image">
+          <picture>
+            <source
+              srcSet="/images/isometric-software.png"
+              media="(min-width: 550px)"
+            />
+            <img src="/images/about-mobile.png" className="" />
+          </picture>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Portfolio() {
+  return (
+    <div className="portfolio section">
+      <div className="portfilio__container section__container">
+        <h2 className="portfolio__title">Portfolio</h2>
+        <div className="portfolio-grid">
+          <div>
+            <img
+              className="portfolio__image"
+              src="/images/portfolio/toollibrary.png"
+            />
+            <p className="portfolio__desc-title">CRUD Tool Tracking App</p>
+            <p className="portfolio__desc-tect">
+              JavaScript, React, Tailwind, Express, Node, MongoDB
+            </p>
+            <p className="portfolio__desc-content">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <div>
+              <FaGithub />
+              <FaExternalLinkAlt />
+            </div>
+          </div>
+          <div>
+            <img
+              className="portfolio__image"
+              src="/images/portfolio/growlerz.png"
+            />
+          </div>
+          <div>
+            <img
+              className="portfolio__image"
+              src="/images/portfolio/jupdeals.png"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Contact() {
+  return (
+    <div>
+      Contact Whether it's brainstorming new ideas or troubleshooting existing
+      issues, I'm committed to finding the best solution for you. So if you're
+      looking for a software engineer that goes beyond developing apps, contact
+      me today.
+    </div>
+  );
+}
+
+export default App;
+
+// Image by <a href="https://www.freepik.com/free-vector/isometric-cms-concept_11788713.htm#query=software&position=1&from_view=search&track=sph">Freepik</a>
