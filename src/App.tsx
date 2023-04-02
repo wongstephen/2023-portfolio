@@ -1,6 +1,9 @@
 import { useState } from "react";
 import "./App.css";
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+
+import Portfolio from "./components/Portfolio";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { CgWebsite } from "react-icons/cg";
 
 function App() {
   return (
@@ -60,9 +63,9 @@ function Landing() {
             <button className="landing__contact">👋 Say Hi!</button>
           </div>
         </div>
-        <div className="landing__image">
-          <img src="https://placehold.co/300x300" alt="placeholder" />
-        </div>
+        {/* <div className="landing__image">
+          <img src="/public/images/headshot-sm.png" alt="placeholder" />
+        </div> */}
       </div>
     </div>
   );
@@ -163,48 +166,6 @@ function About() {
   );
 }
 
-function Portfolio() {
-  return (
-    <div className="portfolio section">
-      <div className="portfilio__container section__container">
-        <h2 className="portfolio__title">Portfolio</h2>
-        <div className="portfolio-grid">
-          <div>
-            <img
-              className="portfolio__image"
-              src="/images/portfolio/toollibrary.png"
-            />
-            <p className="portfolio__desc-title">CRUD Tool Tracking App</p>
-            <p className="portfolio__desc-tect">
-              JavaScript, React, Tailwind, Express, Node, MongoDB
-            </p>
-            <p className="portfolio__desc-content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-            <div>
-              <FaGithub />
-              <FaExternalLinkAlt />
-            </div>
-          </div>
-          <div>
-            <img
-              className="portfolio__image"
-              src="/images/portfolio/growlerz.png"
-            />
-          </div>
-          <div>
-            <img
-              className="portfolio__image"
-              src="/images/portfolio/jupdeals.png"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 function Contact() {
   return (
     <div>
@@ -212,6 +173,8 @@ function Contact() {
       issues, I'm committed to finding the best solution for you. So if you're
       looking for a software engineer that goes beyond developing apps, contact
       me today.
+      <FaGithub />
+      <FaLinkedin />
     </div>
   );
 }
