@@ -162,6 +162,16 @@ table {
 .header-hide {
   top: -50%;
 }
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__social {
+  display: flex;
+  gap: 1.25rem;
+}
 .header__title {
   font-family: "Oxygen", sans-serif;
   font-weight: 300;

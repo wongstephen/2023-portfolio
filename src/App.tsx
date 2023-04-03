@@ -39,11 +39,10 @@ function Header() {
     <header className={`header ${!show && "header-hide"}`}>
       <div className="header__container section__container">
         <h1 className="header__title">wongstephenk.com</h1>
-        {/* <nav>
-          <ul className="navi">
-            <li>home</li>
-          </ul>
-        </nav> */}
+        <div className="header__social">
+          <FaGithub />
+          <FaLinkedin />
+        </div>
       </div>
     </header>
   );
