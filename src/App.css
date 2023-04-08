@@ -230,7 +230,7 @@ button.landing__contact {
 }
 button.landing__contact:hover {
   transform: translateY(-1%);
-  background-color: rgb(85, 0, 255);
+  background-color: rgb(41, 3, 116);
   transition: background-color 0.222s ease-in-out 0.022s;
   color: white;
 }
