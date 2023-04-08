@@ -226,11 +226,13 @@ button.landing__contact {
   border: 0;
   outline: 2px solid white;
   outline-offset: 0.25rem;
-  transition: color 5s;
+  cursor: pointer;
 }
 button.landing__contact:hover {
   transform: translateY(-1%);
   background-color: rgb(85, 0, 255);
+  transition: background-color 0.222s ease-in-out 0.022s;
+  color: white;
 }
 .landing__image {
   width: 100%;
