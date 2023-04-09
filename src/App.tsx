@@ -1,10 +1,10 @@
 import { useState } from "react";
 import "./App.css";
-
 import Portfolio from "./components/Portfolio";
+
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { CgWebsite } from "react-icons/cg";
-
+import Header from "./components/Header";
 function App() {
   return (
     <div className="App">
@@ -16,35 +16,6 @@ function App() {
       </main>
       <Contact />
     </div>
-  );
-}
-
-function Header() {
-  const [lastScrollY, setLastScrollY] = useState<number>(0);
-  const [show, setShow] = useState<boolean>(true);
-
-  function handleScroll(): void {
-    if (window.scrollY > lastScrollY) {
-      // scrolling down
-      setShow(() => false);
-    } else {
-      setShow(() => true);
-    }
-    setLastScrollY(() => window.scrollY);
-  }
-
-  window.addEventListener("scroll", handleScroll);
-
-  return (
-    <header className={`header ${!show && "header-hide"}`}>
-      <div className="header__container section__container">
-        <h1 className="header__title">wongstephenk.com</h1>
-        <div className="header__social">
-          <FaGithub />
-          <FaLinkedin />
-        </div>
-      </div>
-    </header>
   );
 }
 

@@ -151,16 +151,20 @@ table {
 
 /* header */
 .header {
-  background-color: #423a86;
+  background-color: hsla(0, 0%, 13%, 0.95);
+  box-shadow: 0 4px 4px hsla(0, 0%, 13%, 0.25);
+  /* background-color: #423a86; */
   color: #f2f2f2;
-  position: sticky;
+  position: fixed;
   top: 0;
   transition-property: top;
   transition-duration: 1s;
   transition-delay: 0s;
+  width: 100%;
 }
 .header-hide {
   top: -50%;
+  transition: top 1s ease-in-out 0.25s;
 }
 
 .header__container {
