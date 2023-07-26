@@ -1,10 +1,7 @@
 import React from "react";
 import "./portfolio.css";
-import borrowNinjaPic from "../assets/portfolio_borrow-ninja.webp";
 import borrowNinjaPic2 from "../assets/portfolio_borrow-ninja-alt2.webp";
-import growlerszPic from "../assets/portfolio_growlerz.webp";
 import growlerszPic2 from "../assets/portfolio_growlerz-alt.webp";
-import webpassWatchPic from "../assets/portfolio_webpass-watch.webp";
 import webpassWatchPic2 from "../assets/portfolio_webpass-watch-alt.webp";
 import PortfolioCard from "./PortfolioCard";
 
@@ -42,7 +39,8 @@ const Portfolio = (): JSX.Element => {
           <div className="porfolio__spacer"></div>
           {/* WP Dash */}
           <PortfolioCard
-            title="Webpass Watch"
+            type="Full-stack Webapp"
+            title="Navigate the Net with WEBPASS watch: Your Gateway to GFiber Property Insights!"
             image={webpassWatchPic2}
             tech="JavaScript, React, Chart.js, Node.js, Express.js "
             desc={`WEBPASS Watch is the ultimate dashboard app that streamlines the extraction of internet availability information for properties directly from Webpass.net's website. With its intuitive interface, Webpass Dash presents this valuable data in a clear and informative format, making it easy for you to access the information you need at a glance.`}

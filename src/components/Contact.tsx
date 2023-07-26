@@ -1,4 +1,11 @@
-import { FaAt, FaGithub, FaLinkedin, FaMailBulk } from "react-icons/fa";
+import {
+  FaAt,
+  FaCopy,
+  FaEnvelope,
+  FaGithub,
+  FaLinkedin,
+  FaMailBulk,
+} from "react-icons/fa";
 import "./contact.css";
 
 function Contact() {
@@ -18,14 +25,23 @@ function Contact() {
         </p>
         <div className="contact__social-container">
           <span>
-            <FaAt />
+            <FaEnvelope />
             <a
               href="mailto:contact@wongstephenk.com"
               className="contact__social-link"
             >
               contact@wongstephenk.com
             </a>
+            <button
+              className="contact__copy-button"
+              onClick={() => {
+                navigator.clipboard.writeText("contact@wongstephenk.com");
+              }}
+            >
+              <FaCopy />
+            </button>
           </span>
+
           <span>
             <FaGithub />
             <a

@@ -18,12 +18,25 @@
   transition: top 1s ease-in-out 0.25s;
 }
 
+.navigation__button-top {
+  background-color: transparent;
+  border: none;
+}
+
 .navigation__social-link {
   color: white;
 }
 .navigation__social-link:hover {
   color: var(--secondary-color-lime);
   transform: translateY(-1px);
+  transform: scale(1.1);
+  transition-duration: 0.2s;
+}
+
+.header__title:hover {
+  color: var(--secondary-color-lime);
+  transform: translateY(-1px);
+  transition-duration: 0.2s;
 }
 
 .header__container {
@@ -42,4 +55,6 @@
   padding-top: 1rem;
   padding-bottom: 1rem;
   padding-left: 0.25rem;
+  cursor: pointer;
+  color: white;
 }

@@ -89,7 +89,6 @@
   display: flex;
   gap: 2rem;
   font-size: 1.25rem;
-  color: #423a86;
   font-family: "Oxygen", sans-serif;
 }
 .portfolio__card__link a {
@@ -98,12 +97,14 @@
   transition: all;
   transition-delay: 0.0222s;
   transition-timing-function: ease-in-out;
-  transition-duration: 0.25s;
+  /* transition-duration: 0.1s; */
+  text-align: center;
 }
 .portfolio__card__link a:hover {
   text-decoration: none;
-  color: #423a8690;
-  transform: translateY(-2px);
+  color: var(--secondary-color-lime);
+  transform: translateY(-1px);
+  transform: scale(1.1);
 }
 .portfolio__card__link p {
   font-size: 0.75rem;
@@ -130,6 +131,7 @@
   }
   .portfolio__card__image {
     flex-basis: 35%;
+    margin: 0 auto;
   }
   .portfolio__card__image-flip {
     order: 2;
@@ -140,6 +142,7 @@
   }
   .portfolio__card__desc {
     flex-basis: 60%;
+    margin: 0 auto;
   }
   .portfolio__desc-tech {
     text-align: left;

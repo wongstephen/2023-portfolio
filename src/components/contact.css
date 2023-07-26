@@ -56,7 +56,7 @@
   display: flex;
   gap: 0.5rem;
   background-color: rgba(255, 255, 255, 0.25);
-  padding: .25rem
+  padding: 0.25rem;
 }
 
 .contact__social-link {
@@ -67,11 +67,31 @@
   z-index: 10;
 }
 
+.contact__social-link:hover {
+  color: #30bb98;
+  transform: translateY(-1px);
+  text-decoration: underline;
+}
+
+.contact__copy-button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.contact__copy-button:hover {
+  transform: scale(1.1);
+  color: #30bb98;
+}
+
 @media screen and (min-width: 400px) {
   .contact__body-container > p {
     font-size: 1.5rem;
   }
-  
+
   .contact__social-link {
-    font-size: 1rem
+    font-size: 1rem;
   }
+}

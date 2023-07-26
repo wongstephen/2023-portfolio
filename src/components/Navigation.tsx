@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 import "./navigation.css";
 
-const Navigation = ({ topRef }) => {
+const Navigation = ({ topRef }: any) => {
   const [lastScrollY, setLastScrollY] = useState<number>(0);
   const [show, setShow] = useState<boolean>(true);
 
@@ -21,15 +21,23 @@ const Navigation = ({ topRef }) => {
   return (
     <header className={`header ${!show && "header-hide"}`}>
       <div className="header__container section__container">
-        <h1
-          className="header__title"
+        <button
+          className="navigation__button-top"
           onClick={() => {
             topRef.current.scrollIntoView({ behavior: "smooth" });
           }}
+          aria-label="Scroll to top"
         >
-          wongstephenk.com
-        </h1>
+          <h1 className="header__title">wongstephenk.com</h1>
+        </button>
         <div className="header__social">
+          <a
+            href="https://github.com/wongstephen"
+            target="_blank"
+            className="navigation__social-link"
+          >
+            <FaEnvelope />
+          </a>
           <a
             href="https://github.com/wongstephen"
             target="_blank"

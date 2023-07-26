@@ -82,9 +82,9 @@ function About() {
                 />
               </li>
             </ul>
-            <button className="about__button-learn">
+            {/* <button className="about__button-learn">
               Learn More <span>{">"}</span>{" "}
-            </button>
+            </button> */}
           </div>
           <div className="about__image">
             <picture>

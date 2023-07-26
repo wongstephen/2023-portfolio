@@ -6,6 +6,7 @@ import Contact from "./Contact";
 
 import Navigation from "./Navigation";
 import Hero from "./Hero";
+import Footer from "./Footer";
 
 function App() {
   const topRef = useRef<HTMLDivElement>(null);
@@ -20,6 +21,8 @@ function App() {
         <Portfolio />
       </main>
       <Contact />
+      <Footer />
+      
     </div>
   );
 }
