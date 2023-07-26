@@ -2,7 +2,11 @@ import React, { useState } from "react";
 import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 import "./navigation.css";
 
-const Navigation = ({ topRef }: any) => {
+const Navigation = ({
+  topRef,
+}: {
+  topRef: React.RefObject<HTMLDivElement>;
+}) => {
   const [lastScrollY, setLastScrollY] = useState<number>(0);
   const [show, setShow] = useState<boolean>(true);
 
@@ -24,7 +28,8 @@ const Navigation = ({ topRef }: any) => {
         <button
           className="navigation__button-top"
           onClick={() => {
-            topRef.current.scrollIntoView({ behavior: "smooth" });
+            topRef.current &&
+              topRef.current.scrollIntoView({ behavior: "smooth" });
           }}
           aria-label="Scroll to top"
         >
@@ -32,9 +37,10 @@ const Navigation = ({ topRef }: any) => {
         </button>
         <div className="header__social">
           <a
-            href="https://github.com/wongstephen"
+            href="mailto: contact@wongstephenk.com"
             target="_blank"
             className="navigation__social-link"
+            aria-label="Email"
           >
             <FaEnvelope />
           </a>
@@ -42,6 +48,7 @@ const Navigation = ({ topRef }: any) => {
             href="https://github.com/wongstephen"
             target="_blank"
             className="navigation__social-link"
+            aria-label="Github"
           >
             <FaGithub />
           </a>
@@ -49,6 +56,7 @@ const Navigation = ({ topRef }: any) => {
             href="https://www.linkedin.com/in/wongs/"
             target="_blank"
             className="navigation__social-link"
+            aria-label="LinkedIn"
           >
             <FaLinkedin />
           </a>

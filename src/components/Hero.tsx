@@ -1,7 +1,13 @@
 import React from "react";
 import "./hero.css";
 
-function Hero() {
+function Hero({ contactRef }: { contactRef: React.RefObject<HTMLDivElement> }) {
+  const handleButtonClick = () => {
+    //scroll to contact
+    if (contactRef) {
+      contactRef.current?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <div className="hero section">
       <div className="hero__container section__container">
@@ -15,7 +21,7 @@ function Hero() {
             Engineer with a Passion for Crafting Inspiring Solutions.
           </p>
           <div className="hero__contact-container">
-            <button className="hero__contact">
+            <button className="hero__contact" onClick={handleButtonClick}>
               Say Hi! <span>👋</span>{" "}
             </button>
           </div>

@@ -10,19 +10,19 @@ import Footer from "./Footer";
 
 function App() {
   const topRef = useRef<HTMLDivElement>(null);
+  const contactRef = useRef<HTMLDivElement>(null);
   return (
     <div className="App">
       <Navigation topRef={topRef} />
       <main>
         <div ref={topRef} className="top" />
-        <Hero />
+        <Hero contactRef={contactRef} />
         <About />
         <div className="line" />
         <Portfolio />
       </main>
-      <Contact />
-      <Footer />
-      
+      <Contact contactRef={contactRef} />
+      <Footer topRef={topRef} />
     </div>
   );
 }

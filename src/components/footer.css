@@ -13,10 +13,48 @@ footer {
   z-index: -10;
 }
 
-.footer_text {
+.footer__logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+  margin-top: 4rem;
+}
+
+.footer__logo-container img {
+  width: 2rem;
+  height: 2rem;
+}
+
+.footer__logo-container p {
+  font-family: var(--primary-font);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.footer__text-disclaimer {
   font-family: var(--secondary-font);
   font-size: 0.5rem;
   padding: 1rem;
   text-align: center;
   font-weight: 100;
+}
+
+.footer__button {
+  background-color: transparent;
+  border: 2px solid var(--secondary-color-lime);
+  padding: 0.5rem 2rem;
+  border-radius: 1rem;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  cursor: pointer;
+  font-family: var(--secondary-font);
+}
+.footer__button:hover {
+  background-color: var(--secondary-color-lime);
+  color: black;
+  transition: all 0.25s ease-in-out;
+  translate: scale(1.1);
 }
