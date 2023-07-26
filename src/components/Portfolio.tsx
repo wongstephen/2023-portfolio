@@ -1,45 +1,57 @@
 import React from "react";
-
+import "./portfolio.css";
+import borrowNinjaPic from "../assets/portfolio_borrow-ninja.webp";
+import borrowNinjaPic2 from "../assets/portfolio_borrow-ninja-alt2.webp";
+import growlerszPic from "../assets/portfolio_growlerz.webp";
+import growlerszPic2 from "../assets/portfolio_growlerz-alt.webp";
+import webpassWatchPic from "../assets/portfolio_webpass-watch.webp";
+import webpassWatchPic2 from "../assets/portfolio_webpass-watch-alt.webp";
 import PortfolioCard from "./PortfolioCard";
 
 const Portfolio = (): JSX.Element => {
   return (
     <div className="portfolio section">
+      <p className="portfolio__subtitle">From Lines to Realities</p>
       <div className="portfilio__container section__container">
-        <h2 className="portfolio__title">Portfolio</h2>
+        <h2 className="portfolio__title"> Portfolio</h2>
         <div className="portfolio-grid">
           {/* Tool Library */}
           <PortfolioCard
-            title="Tool Tracking App"
-            image="/images/portfolio/toollibrary.png"
+            type="Full-stack webapp"
+            title="Discover BorrowNinja: Your Ultimate Tool Tracking Solution"
+            image={borrowNinjaPic2}
             tech="JavaScript, React, Tailwind, Express, Node, MongoDB"
-            desc={`Tool Library is the perfect solution for keeping track of your tools in an easy and efficient way. With a user-friendly system, you can input your tools and monitor who borrows them, when they're borrowed, and when they're returned. \n \nlogin: demo@toollibrary.com \npassword: password`}
+            desc={`BorrowNinja offers the ideal way to effortlessly manage your tools with utmost ease and efficiency. Our user-friendly system allows you to input your tools and effortlessly monitor borrowers, borrow dates, and return dates. Stay organized and in control with BorrowNinja! \n \nlogin: demo@borrowninja.com \npassword: password`}
             fe="https://github.com/wongstephen/toolloaner-frontend"
             be="https://github.com/wongstephen/toolloaner-backend"
-            extLink="https://toollibrary.wongstephenk.com/"
-          />
+            extLink="https://www.borrowninja.com/"
+          />{" "}
+          <div className="porfolio__spacer"></div>
           {/* Growlerz*/}
           <PortfolioCard
-            title="Business Website"
-            image="/images/portfolio/growlerz.png"
+            type="Full-stack Webapp with Headless CMS"
+            title="Where Wagging Tails Find Joy: Discover Growlerz Seattle Dog Park!"
+            image={growlerszPic2}
             tech="JavaScript, React, Tailwind, GraphQL, Strapi CMs, PostgreSQL"
-            desc={`The Growlerz dog park website utilizes a headless CMS, allowing for effortless updates to business information by the client.`}
+            flip={true}
+            desc={`Introducing the Growlerz Seattle Dogpark Website - Experience effortless updates with our headless CMS. Separating the front-end from back-end content management, the innovative approach allows seamless real-time updates to business information. Enjoy a user-friendly platform that adapts flawlessly to any device. `}
             fe="https://github.com/wongstephen/growlerz2022"
             be="https://github.com/wongstephen/growlerzseattle-cms"
             extLink="https://growlerz.wongstephenk.com/"
           />
+          <div className="porfolio__spacer"></div>
           {/* WP Dash */}
           <PortfolioCard
-            title="Competitive Dashboard"
-            image="/images/portfolio/wpdash.jpg"
+            title="Webpass Watch"
+            image={webpassWatchPic2}
             tech="JavaScript, React, Chart.js, Node.js, Express.js "
-            desc={`Webpass Dash is a dashboard app that extracts internet availability information for properties from Webpass.net's website and presents it in a clear and informative format.`}
+            desc={`WEBPASS Watch is the ultimate dashboard app that streamlines the extraction of internet availability information for properties directly from Webpass.net's website. With its intuitive interface, Webpass Dash presents this valuable data in a clear and informative format, making it easy for you to access the information you need at a glance.`}
             fe="https://github.com/wongstephen"
             be="https://github.com/wongstephen/webpass-function"
             extLink="http://wpdash.wongstephenk.com/"
           />
           {/* WP Dash */}
-          <PortfolioCard
+          {/* <PortfolioCard
             title="E-Commerce App"
             image="/images/portfolio/gearguide.jpg"
             tech="JavaScript, TypeScript, React, API"
@@ -47,7 +59,7 @@ const Portfolio = (): JSX.Element => {
             fe="https://github.com/wongstephen/gearguide"
             be=""
             extLink="https://gearguide.netlify.app/"
-          />
+          /> */}
         </div>
       </div>
     </div>

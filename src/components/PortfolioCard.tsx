@@ -1,6 +1,7 @@
 import React from "react";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 interface Props {
+  type: string;
   title: string;
   image: string;
   tech: string;
@@ -8,8 +9,10 @@ interface Props {
   fe: string | null;
   be: string | null;
   extLink: string;
+  flip?: true | false | null;
 }
 const PortfolioCard = ({
+  type,
   title,
   image,
   tech,
@@ -17,17 +20,23 @@ const PortfolioCard = ({
   fe,
   be,
   extLink,
+  flip,
 }: Props): JSX.Element => {
   return (
     <div className="portfolio__card">
-      <div className="portfolio__card__image">
+      <div
+        className={`portfolio__card__image ${
+          flip && "portfolio__card__image-flip"
+        }`}
+      >
         <img src={image} />
       </div>
 
       <div className="portfolio__card__desc">
         {/* <hr className="portfolio__card__hr" /> */}
+        <p className="portfolio__desc-type">{type}</p>
         <p className="portfolio__desc-title">{title}</p>
-        <p className="portfolio__desc-tech">{tech}</p>
+        <p className="portfolio__desc-tech">Technologies include: {tech}</p>
         <p className="portfolio__desc-content">{desc}</p>
         <div className="portfolio__card__link">
           {fe && (
@@ -41,7 +50,7 @@ const PortfolioCard = ({
             </a>
           )}
           <a href={extLink}>
-            <FaExternalLinkAlt />
+            <FaExternalLinkAlt /> <p>WWW</p>
           </a>
         </div>
       </div>
