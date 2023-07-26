@@ -12,6 +12,13 @@ const Footer = ({ topRef }: { topRef: React.RefObject<HTMLDivElement> }) => {
     <footer>
       <div className="gray"></div>
       <div>
+        <p className="footer__description">
+          wongstephen.com is a sleek and high-performance website, skillfully
+          built with TypeScript and the React framework. From the ground up,
+          every aspect of the app was meticulously crafted using HTML and CSS.
+          To deliver seamless user experiences, the site is hosted on AWS,
+          leveraging its powerful infrastructure.
+        </p>
         <button className="footer__button" onClick={handleButtonClick}>
           Back to Top
         </button>

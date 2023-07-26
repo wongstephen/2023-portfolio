@@ -146,4 +146,6 @@ table {
   --secondary-color-purple: hsl(240, 41%, 92%);
   --primary-font: "Oxygen", sans-serif;
   --secondary-font: "Inter", sans-serif;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
 }
