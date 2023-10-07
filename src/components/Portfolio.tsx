@@ -21,7 +21,7 @@ const Portfolio = (): JSX.Element => {
             desc={`BorrowNinja offers the ideal way to effortlessly manage your tools with utmost ease and efficiency. Our user-friendly system allows you to input your tools and effortlessly monitor borrowers, borrow dates, and return dates. Stay organized and in control with BorrowNinja! \n \nlogin: demo@borrowninja.com \npassword: password`}
             fe="https://github.com/wongstephen/toolloaner-frontend"
             be="https://github.com/wongstephen/toolloaner-backend"
-            extLink="https://www.borrowninja.com/"
+            // extLink="https://www.borrowninja.com/"
           />{" "}
           <div className="porfolio__spacer"></div>
           {/* Growlerz*/}
@@ -34,7 +34,7 @@ const Portfolio = (): JSX.Element => {
             desc={`Introducing the Growlerz Seattle Dogpark Website - Experience effortless updates with our headless CMS. Separating the front-end from back-end content management, the innovative approach allows seamless real-time updates to business information. Enjoy a user-friendly platform that adapts flawlessly to any device. `}
             fe="https://github.com/wongstephen/growlerz2022"
             be="https://github.com/wongstephen/growlerzseattle-cms"
-            extLink="https://growlerz.wongstephenk.com/"
+            // extLink="https://growlerz.wongstephenk.com/"
           />
           <div className="porfolio__spacer"></div>
           {/* WP Dash */}
@@ -46,7 +46,8 @@ const Portfolio = (): JSX.Element => {
             desc={`WEBPASS Watch is the ultimate dashboard app that streamlines the extraction of internet availability information for properties directly from Webpass.net's website. With its intuitive interface, Webpass Dash presents this valuable data in a clear and informative format, making it easy for you to access the information you need at a glance.`}
             fe="https://github.com/wongstephen"
             be="https://github.com/wongstephen/webpass-function"
-            extLink="http://wpdash.wongstephenk.com/"
+            popupImg="placeholder"
+            // extLink="http://wpdash.wongstephenk.com/"
           />
           {/* WP Dash */}
           {/* <PortfolioCard

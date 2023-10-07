@@ -100,7 +100,8 @@
   /* transition-duration: 0.1s; */
   text-align: center;
 }
-.portfolio__card__link a:hover {
+.portfolio__card__link a:hover,
+.portfolio__card__link div:hover {
   text-decoration: none;
   color: var(--secondary-color-lime);
   transform: translateY(-1px);
@@ -111,6 +112,15 @@
   text-align: center;
   line-height: 100%;
   letter-spacing: 0.1em;
+}
+
+.portfolio__card__link > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
 }
 
 .porfolio__spacer {

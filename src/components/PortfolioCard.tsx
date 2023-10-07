@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { FaGithub, FaExternalLinkAlt, FaImage } from "react-icons/fa";
 interface Props {
   type: string;
   title: string;
@@ -8,7 +8,8 @@ interface Props {
   desc: string;
   fe: string | null;
   be: string | null;
-  extLink: string;
+  extLink?: string;
+  popupImg?: string;
   flip?: true | false | null;
 }
 const PortfolioCard = ({
@@ -21,6 +22,7 @@ const PortfolioCard = ({
   be,
   extLink,
   flip,
+  popupImg,
 }: Props): JSX.Element => {
   return (
     <div className="portfolio__card">
@@ -49,9 +51,11 @@ const PortfolioCard = ({
               <FaGithub /> <p>BE</p>
             </a>
           )}
-          <a href={extLink}>
-            <FaExternalLinkAlt /> <p>WWW</p>
-          </a>
+          {extLink ? (
+            <a href={extLink}>
+              <FaExternalLinkAlt /> <p>WWW</p>
+            </a>
+          ) : null}
         </div>
       </div>
     </div>
